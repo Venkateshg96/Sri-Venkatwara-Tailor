@@ -8,116 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> 9603632618</span>
-                    <span><i class="fas fa-envelope"></i> srinivasaraogoli960363@gmail.com</span>
-                </div>
-                <div class="social-links">
-                    <a href="https://wa.me/919603632618" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
-            <div class="header-main">
-                <div class="logo">
-                    <a href="index.html">
-                        <h1>Sri Venkatewara Tailor</h1>
-                        <p>Premium Tailoring Services</p>
-                    </a>
-                </div>
-                
-                <nav class="main-nav">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#services">Services</a></li>
-                        <li><a href="index.html#products">Products</a></li>
-                        <li><a href="index.html#about">About Us</a></li>
-                        <li><a href="index.html#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                
-                <div class="header-actions">
-                    <a href="#cart" class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart</a>
-                    <a href="https://wa.me/919603632618" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i> WhatsApp
-                    </a>
-                </div>
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
+
+    <main style="padding-top: 120px;">
+        <div class="page-title-section">
+            <div class="container">
+                <h1 style="text-align: center; color: #2c3e50; font-size: 36px; margin: 10px 0; padding: 10px 0;">Return & Refund Policy</h1>
             </div>
         </div>
-    </header>
-
-    <main style="padding-top: 200px;">
-        <section class="policy-page">
+        
+        <section class="policy-page" style="padding-top: 0px;">
             <div class="container">
-                <h1>Return & Refund Policy</h1>
-                
                 <div class="policy-content">
                     <p><strong>Effective Date:</strong> December 1, 2025</p>
                     
-                    <h2>1. Custom Tailored Items</h2>
-                    <p>Due to the custom nature of our tailoring services, returns are generally not accepted for:</p>
-                    <ul>
-                        <li>Custom tailored garments made to your measurements</li>
-                        <li>Altered garments</li>
-                        <li>Garments with personalized embroidery or modifications</li>
-                    </ul>
+                    <p><strong>Damage:</strong> Once damage order is return and approved then the order will be delivered in 7 days.</p>
                     
-                    <h2>2. Quality Issues</h2>
-                    <p>If you receive a garment with quality issues, we will:</p>
-                    <ul>
-                        <li>Provide free alterations to fix the issue</li>
-                        <li>Replace the garment if the issue cannot be fixed</li>
-                        <li>Offer a full refund in extreme cases where neither repair nor replacement is satisfactory</li>
-                    </ul>
+                    <p><strong>Return & Exchange:</strong> If return is approved then exchange or replaced product will be delivered in 7 days.</p>
                     
-                    <h2>3. Fit Issues</h2>
-                    <ul>
-                        <li>Free minor alterations within 7 days of delivery</li>
-                        <li>Major fit issues will be assessed case by case</li>
-                        <li>Additional charges may apply for significant modifications</li>
-                    </ul>
+                    <p>Return should be made within 7 days after receiving the product.</p>
                     
-                    <h2>4. Refund Process</h2>
-                    <p>Approved refunds will be processed:</p>
-                    <ul>
-                        <li>Within 7-10 business days</li>
-                        <li>To the original payment method</li>
-                        <li>After deducting applicable charges if any</li>
-                    </ul>
-                    
-                    <h2>5. How to Request Return/Refund</h2>
-                    <ul>
-                        <li>Contact us within 7 days of delivery</li>
-                        <li>Provide order details and reason for return</li>
-                        <li>Send photos if claiming quality issues</li>
-                    </ul>
-                    
-                    <h2>6. Contact for Returns</h2>
-                    <p>Phone: 9603632618<br>
-                    Email: srinivasaraogoli960363@gmail.com<br>
-                    WhatsApp: +91 9603632618</p>
+                    <p><strong>Refund policy:</strong> If approved then refund will be credited to the original payment method within 7 days.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 Sri Venkatewara Tailor. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
 
-    <a href="https://wa.me/919603632618" class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <script>
+        // Function to load external HTML files
+        async function loadHTML(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+                return true;
+            } catch (error) {
+                console.error('Error loading ' + filePath + ':', error);
+                return false;
+            }
+        }
+
+        // Load header and footer when DOM is ready
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadHTML('header-placeholder', 'header.html');
+            await loadHTML('footer-placeholder', 'footer.html');
+        });
+    </script>
 
     <style>
         .policy-page {
