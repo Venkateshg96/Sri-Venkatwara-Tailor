@@ -348,7 +348,8 @@
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const targetId = this.getAttribute('href');
+                    const href = this.getAttribute('href');
+                    const targetId = href.replace('index.html', '');
                     const targetSection = document.querySelector(targetId);
                     
                     // Remove active class from all nav links
@@ -369,14 +370,64 @@
                             targetSection.style.display = 'block';
                         }
                         
+                        // Update URL to just index.html without hash
+                        window.history.pushState({section: targetId}, '', 'index.html');
+                        
                         // Scroll to top
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
                 });
             });
 
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', function(e) {
+                if (e.state && e.state.section) {
+                    showSection(e.state.section);
+                }
+            });
+
             // Also set up other header-related functionality
             setupHeaderFunctionality();
+            
+            // Handle navigation from URL hash (when coming from other pages)
+            handleInitialHash();
+        }
+
+        // Function to show a specific section
+        function showSection(targetId) {
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+                // Hide all sections first
+                document.querySelectorAll('section').forEach(section => {
+                    section.style.display = 'none';
+                });
+                
+                // Show target section
+                if (targetId === '#home') {
+                    document.querySelector('#home').style.display = 'flex';
+                } else {
+                    targetSection.style.display = 'block';
+                }
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                    const linkTarget = link.getAttribute('href').replace('index.html', '');
+                    if (linkTarget === targetId) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        }
+
+        // Function to handle initial hash from URL
+        function handleInitialHash() {
+            const hash = window.location.hash;
+            if (hash) {
+                showSection(hash);
+                // Update URL to remove hash
+                window.history.replaceState({section: hash}, '', 'index.html');
+            }
         }
 
         // Function to set up other header functionality
