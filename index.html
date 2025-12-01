@@ -8,58 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-main">
-                <!-- Logo Section -->
-                <div class="logo">
-                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=80&h=80&q=80" alt="Logo" class="logo-icon">
-                    <div class="logo-text">
-                        <h1>GOLI SRINIVASARAO</h1>
-                    </div>
-                </div>
-                
-                <!-- Search Section -->
-                <div class="search-section">
-                    <div class="search-box">
-                        <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Search for a product" id="search-input">
-                    </div>
-                </div>
-                
-                <!-- Action Icons -->
-                <div class="header-actions">
-                    <button class="action-btn location-btn" title="Location">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </button>
-                    <button class="action-btn account-btn" title="Account">
-                        <i class="fas fa-user"></i>
-                    </button>
-                    <button class="action-btn cart-btn" title="Cart">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">1</span>
-                    </button>
-                    <a href="https://wa.me/919603632618" class="action-btn whatsapp-btn" title="WhatsApp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Navigation Menu -->
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#home" class="nav-link">Home</a></li>
-                    <li><a href="#services" class="nav-link">Services</a></li>
-                    <li><a href="#products" class="nav-link">Products</a></li>
-                    <li><a href="#about" class="nav-link">About Us</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li><a href="#account" class="nav-link">My Account</a></li>
-                    <li><a href="#orders" class="nav-link">My Orders</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <!-- Header Include -->
+    <div id="header-placeholder"></div>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -368,101 +318,163 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Sri Venkatewara Tailor</h3>
-                    <p>Your trusted partner for premium tailoring services with over 20 years of experience in creating perfect fits.</p>
-                    <div class="social-links">
-                        <a href="https://wa.me/919603632618"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="#services">Custom Shirts</a></li>
-                        <li><a href="#services">Formal Suits</a></li>
-                        <li><a href="#services">Alterations</a></li>
-                        <li><a href="#services">Wedding Wear</a></li>
-                        <li><a href="#services">Express Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Policies</h3>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-conditions.html">Terms & Conditions</a></li>
-                        <li><a href="return-policy.html">Return & Refund Policy</a></li>
-                        <li><a href="shipping-policy.html">Shipping Policy</a></li>
-                        <li><a href="payment-policy.html">Payment Policy</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h3>Get In Touch</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>3-73, Valaparla Main Road<br>Andhra Pradesh - 523260</span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span><a href="tel:9603632618">9603632618</a></span>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span><a href="mailto:srinivasaraogoli960363@gmail.com">srinivasaraogoli960363@gmail.com</a></span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-bottom-content">
-                    <p>&copy; 2025 Sri Venkatewara Tailor. All rights reserved.</p>
-                    <p>Powered by GOLI SRINIVASARAO</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/919603632618" class="floating-whatsapp" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Cart Sidebar -->
-    <div id="cart-sidebar" class="cart-sidebar">
-        <div class="cart-header">
-            <h3>Shopping Cart</h3>
-            <button class="close-cart">&times;</button>
-        </div>
-        <div class="cart-content">
-            <p>Your cart is empty</p>
-        </div>
-        <div class="cart-footer">
-            <button class="btn btn-primary">Checkout</button>
-        </div>
-    </div>
-
-    <div class="cart-overlay"></div>
+    <!-- Footer Include -->
+    <div id="footer-placeholder"></div>
 
     <script src="script.js"></script>
+    <script>
+        // Function to load external HTML files
+        async function loadHTML(elementId, filePath) {
+            try {
+                const response = await fetch(filePath);
+                const html = await response.text();
+                document.getElementById(elementId).innerHTML = html;
+                
+                // If we're loading the header, set up navigation after it loads
+                if (elementId === 'header-placeholder') {
+                    setupNavigation();
+                }
+                
+                return true;
+            } catch (error) {
+                console.error('Error loading ' + filePath + ':', error);
+                return false;
+            }
+        }
+
+        // Function to set up navigation links after header is loaded
+        function setupNavigation() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    // Remove active class from all nav links
+                    navLinks.forEach(navLink => navLink.classList.remove('active'));
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    if (targetSection) {
+                        // Hide all sections first
+                        document.querySelectorAll('section').forEach(section => {
+                            section.style.display = 'none';
+                        });
+                        
+                        // Show target section
+                        if (targetId === '#home') {
+                            document.querySelector('#home').style.display = 'flex';
+                        } else {
+                            targetSection.style.display = 'block';
+                        }
+                        
+                        // Scroll to top
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Also set up other header-related functionality
+            setupHeaderFunctionality();
+        }
+
+        // Function to set up other header functionality
+        function setupHeaderFunctionality() {
+            // Search functionality
+            const searchInput = document.getElementById('search-input');
+            if (searchInput) {
+                searchInput.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    const productItems = document.querySelectorAll('.product-item');
+                    
+                    productItems.forEach(item => {
+                        const productName = item.querySelector('h3').textContent.toLowerCase();
+                        const productDescription = item.querySelector('p').textContent.toLowerCase();
+                        
+                        if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            }
+
+            // Cart functionality
+            const cartBtn = document.querySelector('.cart-btn');
+            if (cartBtn) {
+                cartBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const cartSidebar = document.getElementById('cart-sidebar');
+                    const cartOverlay = document.querySelector('.cart-overlay');
+                    
+                    if (cartSidebar && cartOverlay) {
+                        cartSidebar.classList.add('open');
+                        cartOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }
+                });
+            }
+
+            // Account button functionality
+            const accountBtn = document.querySelector('.account-btn');
+            if (accountBtn) {
+                accountBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    // Hide all sections
+                    document.querySelectorAll('section').forEach(section => {
+                        section.style.display = 'none';
+                    });
+                    // Show account section
+                    const accountSection = document.querySelector('#account');
+                    if (accountSection) {
+                        accountSection.style.display = 'block';
+                    }
+                    // Update nav link active state
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#account') {
+                            link.classList.add('active');
+                        }
+                    });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        }
+
+        // Load header and footer when DOM is ready
+        document.addEventListener('DOMContentLoaded', async function() {
+            await loadHTML('header-placeholder', 'header.html');
+            await loadHTML('footer-placeholder', 'footer.html');
+            setupFooterFunctionality();
+        });
+
+        // Function to set up footer functionality
+        function setupFooterFunctionality() {
+            const cartSidebar = document.getElementById('cart-sidebar');
+            const cartOverlay = document.querySelector('.cart-overlay');
+            const closeCart = document.querySelector('.close-cart');
+            
+            function closeCartSidebar() {
+                if (cartSidebar && cartOverlay) {
+                    cartSidebar.classList.remove('open');
+                    cartOverlay.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            }
+            
+            if (closeCart) {
+                closeCart.addEventListener('click', closeCartSidebar);
+            }
+            
+            if (cartOverlay) {
+                cartOverlay.addEventListener('click', closeCartSidebar);
+            }
+            
+            // Make closeCartSidebar available globally
+            window.closeCartSidebar = closeCartSidebar;
+        }
+    </script>
 </body>
 </html>
