@@ -489,7 +489,7 @@ body {
 
 /* Services Section */
 .services {
-    padding: 100px 0;
+    padding: 180px 0 100px 0;
     background: #f8f9fa;
 }
 
@@ -539,7 +539,7 @@ body {
 
 /* Products Section */
 .products {
-    padding: 100px 0;
+    padding: 180px 0 100px 0;
     background: white;
 }
 
@@ -627,7 +627,7 @@ body {
 
 /* About Section */
 .about {
-    padding: 100px 0;
+    padding: 180px 0 100px 0;
     background: #f8f9fa;
 }
 
@@ -693,7 +693,7 @@ body {
 
 /* Contact Section */
 .contact {
-    padding: 100px 0;
+    padding: 180px 0 100px 0;
     background: white;
 }
 
@@ -788,9 +788,8 @@ body {
 
 /* Account and Orders Sections */
 .account, .orders {
-    padding: 100px 0;
+    padding: 200px 0 100px 0;
     min-height: 100vh;
-    padding-top: 200px;
 }
 
 .account-content {
@@ -1191,7 +1190,14 @@ body {
     .hero {
         flex-direction: column;
         text-align: center;
-        padding: 120px 0 60px;
+        padding: 200px 0 60px;
+    }
+    
+    .services,
+    .products,
+    .about,
+    .contact {
+        padding: 200px 0 60px 0;
     }
     
     .hero-content {
