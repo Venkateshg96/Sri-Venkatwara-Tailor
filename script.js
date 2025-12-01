@@ -1,58 +1,8 @@
 // DOM Content Loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Search functionality
-    const searchInput = document.getElementById('search-input');
-    if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            const productItems = document.querySelectorAll('.product-item');
-            
-            productItems.forEach(item => {
-                const productName = item.querySelector('h3').textContent.toLowerCase();
-                const productDescription = item.querySelector('p').textContent.toLowerCase();
-                
-                if (productName.includes(searchTerm) || productDescription.includes(searchTerm)) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    }
-
     // Mobile menu toggle (removed as navigation is now always visible)
     
-    // Smooth scrolling for navigation links
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-            
-            // Remove active class from all nav links
-            navLinks.forEach(navLink => navLink.classList.remove('active'));
-            // Add active class to clicked link
-            this.classList.add('active');
-            
-            if (targetSection) {
-                // Hide all sections first
-                document.querySelectorAll('section').forEach(section => {
-                    section.style.display = 'none';
-                });
-                
-                // Show target section
-                if (targetId === '#home') {
-                    document.querySelector('#home').style.display = 'flex';
-                } else {
-                    targetSection.style.display = 'block';
-                }
-                
-                // Scroll to top
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        });
-    });
+    // Navigation links will be set up after header loads - handled in index.html
 
     // Product category filtering
     const categoryTabs = document.querySelectorAll('.tab-btn');
@@ -105,38 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Cart functionality
-    const cartBtn = document.querySelector('.cart-btn');
-    const cartSidebar = document.getElementById('cart-sidebar');
-    const cartOverlay = document.querySelector('.cart-overlay');
-    const closeCart = document.querySelector('.close-cart');
-    
-    function openCart() {
-        cartSidebar.classList.add('open');
-        cartOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeCartSidebar() {
-        cartSidebar.classList.remove('open');
-        cartOverlay.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
-    
-    if (cartBtn) {
-        cartBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            openCart();
-        });
-    }
-    
-    if (closeCart) {
-        closeCart.addEventListener('click', closeCartSidebar);
-    }
-    
-    if (cartOverlay) {
-        cartOverlay.addEventListener('click', closeCartSidebar);
-    }
+    // Cart functionality - handled in header setup after header loads
 
     // Product order buttons
     const orderButtons = document.querySelectorAll('.product-item .btn');
